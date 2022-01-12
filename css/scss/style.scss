@@ -1,0 +1,152 @@
+@import "normalize";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+:before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body{
+  padding: 200px 0;
+  font-family: sans-serif;
+}
+
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#infographic{
+  .title-step{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+
+  .infographic-grid{
+    display: flex;
+    flex-wrap: wrap;
+
+    .infographic-item{
+      width: 50%;
+      min-width: 50%;
+      margin-bottom: 50px;
+    }
+
+    .question{
+      text-align: center;
+      padding: 7px 15px;
+      background: #c4c4c4;
+      max-width: 250px;
+      margin: 0 auto 40px;
+      min-height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .answer{
+      width: 250px;
+      margin: 0 auto;
+      border: 2px solid #c4c4c4;
+      padding: 15px 10px;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+
+      .content{
+        text-align: center;
+      }
+
+      .title-wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & + *{
+          margin-top: 5px;
+        }
+
+        .title{
+          text-transform: uppercase;
+          text-align: left;
+          margin-right: 5px;
+          width: 60%;
+        }
+
+        .score{
+          width: 40%;
+          img{
+            width: 15px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.result{
+  width: 1000px;
+  margin: 0 auto;
+  border: 2px solid #c4c4c4;
+  padding: 15px 10px;
+  display: none;
+
+  .box-grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .name{
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #000;
+  }
+
+  .item-grid{
+    display: flex;
+    align-items: center;
+  }
+
+  .item-results{
+    .title{
+      text-transform: uppercase;
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: 17px;
+    }
+
+    .score{
+      width: 23px;
+      display: flex;
+
+      img{
+        width: 100%;
+        height: auto;
+
+        & + *{
+          margin-left: 5px;
+        }
+      }
+    }
+
+    & + *{
+      margin-left: 20px;
+    }
+  }
+}
